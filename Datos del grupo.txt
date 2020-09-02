@@ -1,2 +1,3 @@
 Carlos Andrés Selman David – 2018325 – IN5BM – Diseño de la Aplicación
 Martin Alejandro Tecún Charles – 2016228 – IN5BM – Implementar el archivo de configuración – Implementar el CRUD en el servelt (Operaciones)
+Fredy Jose Daniel Reyes Saban - 2019035 - IN5BM - Implementación de la interfaz - Implementación del controlador Editar, eliminar
