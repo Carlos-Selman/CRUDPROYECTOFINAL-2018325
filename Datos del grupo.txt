@@ -8,3 +8,4 @@ Jeffry Alexander Ordoñez Pacheco - 2019042 - IN5BM - Crear y realizar las vista
 Juan José Rodas Mansilla - 2016262 - IN5BM - Desarrollo de la Base de Datos
 Oscar Joaquín Sián Orón - 2019017 - IN5BM - Modelo DAO 
 José Andrés Subuyuj Guxmán - 2016243 - IN5BM - 2 Servlet
+José Alejandro Zuñiga Collado - 2016497 - IN5BM - Creación de la Aplicación con la Estructura.
