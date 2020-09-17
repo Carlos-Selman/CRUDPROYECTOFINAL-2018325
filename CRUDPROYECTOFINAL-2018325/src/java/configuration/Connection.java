@@ -7,7 +7,7 @@ package configuration;
 
 /**
  *
- * @author jose
+ * ESTA CLASE SE DEBE DE BORRAR
  */
 public class Connection {
     

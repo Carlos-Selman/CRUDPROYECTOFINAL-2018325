@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package modelDAO;
+package model;
 
 /**
  *
  * ESTA CLASE SE DEBE DE BORRAR
  */
-public class modelDao {
+public class model {
     
 }
