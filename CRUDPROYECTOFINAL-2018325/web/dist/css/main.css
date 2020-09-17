@@ -123,3 +123,13 @@ body {
     margin-left: 0;
   }
 }
+/*Estilos para form de añadir*/
+.form-center{
+    padding-left: 25%;
+    padding-right: 0;
+    white-space: nowrap;
+    padding-top: 10%;
+}
+.form-section{
+    background-color: #f7f7f7;
+}
