@@ -133,3 +133,8 @@ body {
 .form-section{
     background-color: #f7f7f7;
 }
+/*Estilos para listar*/
+.table-data{
+    background-color: blue;
+    padding-top: 100px;
+}
