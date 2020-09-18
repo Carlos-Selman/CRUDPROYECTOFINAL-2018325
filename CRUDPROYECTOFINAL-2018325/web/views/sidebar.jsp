@@ -21,17 +21,17 @@
                         <img src="../dist/img/logo.png" class="img-responsive img-circle logo-img">
                     </a>
                 </li>
-                <div class="links">
-                    <li>
-                        <a href="#">Inicio</a>
-                    </li>
-                    <li>
-                        <a href="#">Listar</a>
-                    </li>
-                    <li>
-                        <a href="#">Agregar</a>
-                    </li>
-                </div>
+                    <div class="links">
+                        <li>
+                            <a href="../index.html">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="listarView.jsp">Listar</a>
+                        </li>
+                        <li>
+                            <a href="addView.jsp">Agregar</a>
+                        </li>
+                    </div>
             </ul>
         </div>
         <!-- Page Content -->

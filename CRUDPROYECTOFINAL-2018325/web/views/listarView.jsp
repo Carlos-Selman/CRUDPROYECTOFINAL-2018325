@@ -1,19 +1,19 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-
     <head>
-        <link rel="stylesheet" type="text/css" href="../dist/css/dataTables/bootstrap-tables.min.css">
-        <link rel="stylesheet" type="text/css" href="../dist/css/dataTables/dataTables.bootstrap4.min.css">
-        <link rel="stylesheet" href="../dist/css/bootstrap/bootstrap.min.css">
         <link rel="icon" href="../dist/img/LOGO CPF.png?v=2">
-        <link rel="stylesheet" href="../dist/css/fontawesome/css/all.min.css">
-        <link rel="stylesheet" href="../dist/css/main.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no">
-        <title>Sidebar</title>
+        <!--CSS-->
+        <link rel="stylesheet" type="text/css" href="../dist/css/dataTables/bootstrap-tables.min.css">
+        <link rel="stylesheet" href="../dist/css/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../dist/css/dataTables/dataTables.bootstrap4.min.css">
+        <link rel="stylesheet" href="../dist/css/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="../dist/css/main.css">
+        <!--Termina CSS-->
+        <title>Listar</title>
     </head>
-
     <body>
         <!--Empieza Side bar-->
         <div id="wrapper">
@@ -28,13 +28,13 @@
                     </li>
                     <div class="links">
                         <li>
-                            <a href="#">Inicio</a>
+                            <a href="../index.html">Inicio</a>
                         </li>
                         <li>
-                            <a href="#">Listar</a>
+                            <a href="listarView.jsp">Listar</a>
                         </li>
                         <li>
-                            <a href="#">Agregar</a>
+                            <a href="addView.jsp">Agregar</a>
                         </li>
                     </div>
                 </ul>
@@ -68,15 +68,15 @@
     </body>
     <!--Scripts-->
     <script src="../dist/js/jquery-3.5.1.min.js" type="text/javascript"></script>
-    <script type="text/javascript" charset="utf8" src="../dist/js/dataTables/dataTables.bootstrap4.min.js"></script>
     <script type="text/javascript" charset="utf8" src="../dist/js/dataTables/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="../dist/js/dataTables/BootstrapDataTables.min.js"></script>
     <script>
         $("#menu-toggle").click(function (e) {
             e.preventDefault();
             $("#wrapper").toggleClass("toggled");
         });
     </script>
-        <script>
+    <script>
         $(document).ready( function () {
         $('#team').DataTable();
         } );
@@ -84,7 +84,5 @@
 
     <script src="../dist/js/popper.min.js" type="text/javascript"></script>
     <script src="../dist/css/fontawesome/js/all.min.js" type="text/javascript"></script>
-
     <!--Terminan Scripts-->
-
 </html>

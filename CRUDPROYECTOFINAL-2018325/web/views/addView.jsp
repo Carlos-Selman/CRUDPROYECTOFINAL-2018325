@@ -16,7 +16,7 @@
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <title>Agregar</title>
     </head>
-    <body class="form-section">
+    <body class="color-section">
         <!--Empieza side bar-->
         <div id="wrapper">
         <!-- Sidebar -->
@@ -29,10 +29,10 @@
                     </li>
                     <div class="links">
                         <li>
-                            <a href="#">Inicio</a>
+                            <a href="../index.html">Inicio</a>
                         </li>
                         <li>
-                            <a href="#">Listar</a>
+                            <a href="listarView.jsp">Listar</a>
                         </li>
                         <li>
                             <a href="addView.jsp">Agregar</a>
