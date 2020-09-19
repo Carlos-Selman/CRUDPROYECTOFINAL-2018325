@@ -106,7 +106,7 @@ body {
     padding-right: 0;
   }
   #wrapper.toggled {
-    padding-right: 250px;
+    padding-left: 250px;
   }
   #sidebar-wrapper {
     width: 0;
@@ -130,7 +130,7 @@ body {
     white-space: nowrap;
     padding-top: 10%;
 }
-.form-section{
+.color-section{
     background-color: #f7f7f7;
 }
 /*Estilos para listar*/
