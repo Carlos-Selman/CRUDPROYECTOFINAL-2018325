@@ -6,20 +6,20 @@
         <link rel="stylesheet" href="../dist/css/bootstrap/bootstrap.min.css">
         <link rel="stylesheet" href="../dist/css/main.css">
         <link rel="stylesheet" href="../dist/css/fontawesome/css/all.min.css">
+        <link rel="icon" href="../dist/img/LOGO CPF.png?v=2">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <title>Editar</title>
     </head>
-    <body>
+    <body class="color-section">
        <!--Empieza Side bar-->
        <div id="wrapper">
-
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#" class="text-center">
-                        <img src="../dist/img/logo.png" class="img-responsive img-circle logo-img">
+                       <center><img src="../dist/img/LOGO CPF.png" class="img-responsive img-circle logo-img"></center>
                     </a>
                 </li>
                     <div class="links">
@@ -40,24 +40,18 @@
             <div class="container-fluid">
               <a href="#menu-toggle" class="float-right" id="menu-toggle"><i class="fas fa-bars" style="width: 15px; height: 15px;"></i></a>
                 <!--**** CONTENIDO AQUI *******-->
-            <div class="container form-center">
-                <div class="col-1g-4">
-                    <% 
-                    PersonaDAO nuevaPersonaDao = new PersonaDAO ();
-                    int codPersona = Ingerer.parseInt((String)request.getAtribute("codPer"));
-                    Persona nuevaPersona = (Persona)nuevaPersonaDao.list(codPersona);
-                    %> 
-                    <h1>Editar Persona</h1>
-                    <form action="Controlador">
-                        <strong>DPI:</strong><br>
-                        <input class="form-control" type="text" name=="txtDPI" value="<%=nuevaPersona.getDPI() %>"><br>
-                        <strong>Nombres:</strong><br>
-                        <input class="form-control" type="text" name="txtNombre" value="<%=nuevaPersona.getNombrePersona() %>"><br><br>
-                        <input type="hidden" name="txtCodigoPersona" value="<%=nuevaPersona.getCodigoPersona()%>"><br>
-                        <div class="text-center"><input class="btn btn-primary" type="submit" name="accion" value="Actualizar"></div>
-                    </form>
-                </div>
-            </div>    
+                   <div class="container form-center">
+                        <div class="col-lg-4">
+                            <h1>Editar Persona</h1>
+                            <form action="Controlador">
+                                <strong>DPI:</strong><br>
+                                <input class="form-control" type="text" name="txtDPI"><br>
+                                <strong>Nombres:</strong><br>
+                                <input class="form-control" type="text" name="txtNombres"><br><br>
+                                <div class="text-center"><input class="btn btn-success btn-lg" type="submit" name="accion" value="Actualizar"></div>
+                            </form>
+                        </div>
+                    </div>
                 <!--**** CONTENIDO AQUI *******-->
             </div>
         </div>
