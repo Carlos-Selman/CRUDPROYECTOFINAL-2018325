@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.Persona;
-import modelDAO.modelDao;
+import modelDAO.PersonaDAO;
 
 /**
  *
@@ -23,9 +23,9 @@ public class Controller extends HttpServlet {
 
         String listar = "view/listarView.jsp";
         String add = "view/addView.jsp";
-        String edit = "view/sidebar.jsp";
+        String edit = "view/editView.jsp";
         Persona nuevaPersona = new Persona();
-        modelDao nuevaPersonaDao = new modelDao();
+        PersonaDAO nuevaPersonaDao = new PersonaDAO();
         int codigoPersona;
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
