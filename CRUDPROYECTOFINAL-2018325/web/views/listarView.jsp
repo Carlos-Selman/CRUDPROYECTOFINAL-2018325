@@ -74,7 +74,7 @@
                                 <td><%= per.getNombrePersona()%></td>
                                 <td>
                                     <a href="Controlador?accion=editar&codigoPersona=<%= per.getCodigoPersona()%>" class="btn btn-primary">Editar</a>
-                                   <a onclick="erase()" href="Controlador?accion=eliminar&codigoPersona=<%= per.getCodigoPersona()%>" class="btn btn-danger">Eliminar</a>
+                                    <a onclick='deleteM()' href="Controlador?accion=eliminar&codigoPersona=<%= per.getCodigoPersona()%>" class="btn btn-danger">Eliminar</a>
                                 </td>           
                             </tr>
                     <%
@@ -91,10 +91,16 @@
     </body>
     <!--Scripts-->
     <script src="dist/js/jquery-3.5.1.min.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script type="text/javascript" charset="utf8" src="dist/js/dataTables/jquery.dataTables.min.js"></script>
     <script type="text/javascript" charset="utf8" src="dist/js/dataTables/BootstrapDataTables.min.js"></script>
     <script src="dist/js/main.js" type="text/javascript"></script>
     <script src="dist/js/popper.min.js" type="text/javascript"></script>
     <script src="dist/css/fontawesome/js/all.min.js" type="text/javascript"></script>
+    <script>
+    function deleteM(){
+        swal("El elemento ha sido eliminado!", "", "success");
+    }
+    </script>
     <!--Terminan Scripts-->
 </html>

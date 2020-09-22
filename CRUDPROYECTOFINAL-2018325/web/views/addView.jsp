@@ -50,10 +50,10 @@
                             <h1>Agregar Persona</h1>
                             <form action="Controlador">
                                 <strong>DPI:</strong><br>
-                                <input class="form-control" type="text" name="txtDPI"><br>
+                                <input class="form-control" type="text" name="txtDPI" required><br>
                                 <strong>Nombres:</strong><br>
-                                <input class="form-control" type="text" name="txtNombres"><br><br>
-                                <div class="text-center"><input class="btn btn-success btn-lg" type="submit" name="accion" value="Agregar"></div>
+                                <input class="form-control" type="text" name="txtNombres" required><br><br>
+                                <div class="text-center"><input class="btn btn-success btn-lg" type="submit" name="accion" value="Agregar" onclick='add()'></div>
                             </form>
                         </div>
                     </div>
@@ -65,9 +65,14 @@
     </body>
     <!--Scripts-->
     <script src="dist/js/jquery-3.5.1.min.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="dist/js/main.js" type="text/javascript"></script>
     <script src="dist/js/popper.min.js" type="text/javascript"></script>
     <script src="dist/css/fontawesome/js/all.min.js" type="text/javascript"></script>
-    
+    <script>
+    function add(){
+        swal("Exito !", "Registro agregado correctamente!", "success");
+    }
+    </script>
     <!--Termina Scripts-->
 </html>

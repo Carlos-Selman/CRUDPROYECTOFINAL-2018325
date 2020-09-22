@@ -7,5 +7,5 @@ $(document).ready(function() {
 });
 
 function erase(){
-    alert('el elemento se elimino');
+    alert('Elemento borrado con exito !!');
 }

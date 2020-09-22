@@ -52,11 +52,11 @@
                             <h1>Editar Persona</h1>
                             <form action="Controlador">
                                 <strong>DPI:</strong><br>
-                                <input class="form-control" type="text" name="txtDPI" value="<%=nuevaPersona.getDPI() %>"><br>
+                                <input class="form-control" type="text" name="txtDPI" value="<%=nuevaPersona.getDPI() %>" required><br>
                                 <strong>Nombres:</strong><br>
-                                <input class="form-control" type="text" name="txtNombres" value="<%=nuevaPersona.getNombrePersona() %>"><br><br>
+                                <input class="form-control" type="text" name="txtNombres" value="<%=nuevaPersona.getNombrePersona() %>" required><br><br>
                                 <input type="hidden" name="txtCodigoPersona" value="<%=nuevaPersona.getCodigoPersona() %>">
-                                <div class="text-center"><input class="btn btn-success btn-lg" type="submit" name="accion" value="Actualizar"></div>
+                                <div class="text-center"><input class="btn btn-success btn-lg" type="submit" name="accion" value="Actualizar" onclick="edit()"></div>
                             </form>
                         </div>
                     </div>
@@ -68,9 +68,14 @@
     </body>
     <!--Scripts-->
     <script src="dist/js/jquery-3.5.1.min.js" type="text/javascript"></script>
+     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="dist/js/main.js" type="text/javascript"></script>
     <script src="dist/js/popper.min.js" type="text/javascript"></script>
     <script src="dist/css/fontawesome/js/all.min.js" type="text/javascript"></script>
-
+    <script>
+    function edit(){
+        swal("Exito !", "Registro actualizado correctamente!", "success");
+    }
+    </script>
     <!--Terminan Scripts-->
 </html>

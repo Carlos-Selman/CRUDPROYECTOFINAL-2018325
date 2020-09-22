@@ -1,6 +1,9 @@
 package controller;
+import javax.script.*;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -11,6 +14,7 @@ import modelDAO.PersonaDAO;
 public class Controlador extends HttpServlet {
     //Variables de clase
     int codigoPersona;
+    String js = "confirm('Estas seguro de eliminarlo')";
     String home = "index.html";
     String listar = "views/listarView.jsp";
     String add = "views/addView.jsp";
@@ -54,7 +58,12 @@ public class Controlador extends HttpServlet {
           NuevaPersona.setNombrePersona(NombreP);
           PersonaDAO nuevaPersonaDAO = new PersonaDAO();
           nuevaPersonaDAO.add(NuevaPersona);
-          acceso = listar;
+          try {
+              Thread.sleep(2000);
+              acceso = listar;
+          } catch (InterruptedException ex) {
+              Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
+          }
       }else if(action.equalsIgnoreCase("editar")){
           request.setAttribute("codPer",request.getParameter("codigoPersona"));
           acceso = edit;
@@ -66,12 +75,23 @@ public class Controlador extends HttpServlet {
           nuevaPersona.setDPI(DPI);
           nuevaPersona.setNombrePersona(Nombre);
           nuevaPersonaDao.edit(nuevaPersona);
-          acceso=listar;
+          try {
+              Thread.sleep(2000);
+              acceso=listar;
+          } catch (InterruptedException ex) {
+              Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
+          }
       }else if(action.equalsIgnoreCase("eliminar")){
+          
           codigoPersona = Integer.parseInt(request.getParameter("codigoPersona"));
           nuevaPersona.setCodigoPersona(codigoPersona);
           nuevaPersonaDao.eliminar(codigoPersona);
-          acceso=listar;
+          try {
+              Thread.sleep(2000);
+              acceso=listar;
+          } catch (InterruptedException ex) {
+              Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
+          }
       }
       
       RequestDispatcher vista = request.getRequestDispatcher(acceso);

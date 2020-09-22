@@ -21,3 +21,8 @@ public class Conexion {
         return conexion;
     }
 }
+/* ------------------------------------------IMPORTANTE---------------------------------------
+En caso de tener problema con la zona horario y sus credenciales son root y admin sustituir la linea de la url
+por esta linea
+jdbc:mysql://localhost:3306/ProyectoIN5BM?useTimeZone=true&serverTimezone=UTC&autoReconnect=true&useSSL=false", "root","admin"
+*/
