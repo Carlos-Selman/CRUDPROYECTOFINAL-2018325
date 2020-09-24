@@ -1,4 +1,4 @@
-  <%@page import="model.Persona"%>
+ <%@page import="model.Persona"%>
 <%@page import="modelDAO.PersonaDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -25,13 +25,13 @@
                 </li>
                     <div class="links">
                         <li>
-                            <a href="index.html">Inicio</a>
+                            <a href="index.html"><i class="fas fa-home" style="padding-right: 5px; color: white; font-size: 18pt"></i>Inicio</a>
                         </li>
                         <li>
-                            <a href="Controlador?accion=listar">Listar</a>
+                            <a href="Controlador?accion=listar"><i class="fas fa-clipboard-list" style="padding-right: 5px; color: white; font-size: 22pt;"></i>Listar</a>
                         </li>
                         <li>
-                            <a href="Controlador?accion=add">Agregar</a>
+                            <a href="Controlador?accion=add"><i class="fas fa-plus" style="padding-right: 5px; color: white; font-size: 22pt;"></i>Agregar</a>
                         </li>
                     </div>
             </ul>
@@ -47,10 +47,8 @@
                         Persona nuevaPersona = (Persona)nuevaPersonaDao.list(CodigoPersona);
 
                         %>
-                   <div class="container form-center">
-                        <div class="col-lg-4">
-                            <h1>Editar Persona</h1>
-                            <form action="Controlador">
+                    <h1 class="text-center">Editar Persona</h1>  
+                          <form action="Controlador"  class="col-xs-5" style="padding-left: 400px; padding-right: 0; width: 70%; padding-top: 50px;">
                                 <strong>DPI:</strong><br>
                                 <input class="form-control" type="text" name="txtDPI" value="<%=nuevaPersona.getDPI() %>" required><br>
                                 <strong>Nombres:</strong><br>
@@ -58,8 +56,6 @@
                                 <input type="hidden" name="txtCodigoPersona" value="<%=nuevaPersona.getCodigoPersona() %>">
                                 <div class="text-center"><input class="btn btn-success btn-lg" type="submit" name="accion" value="Actualizar" onclick="edit()"></div>
                             </form>
-                        </div>
-                    </div>
                 <!--**** CONTENIDO AQUI *******-->
             </div>
         </div>

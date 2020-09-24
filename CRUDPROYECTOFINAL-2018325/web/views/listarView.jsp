@@ -33,13 +33,13 @@
                     </li>
                     <div class="links">
                         <li>
-                            <a href="index.html">Inicio</a>
+                            <a href="index.html"><i class="fas fa-home" style="padding-right: 5px; color: white; font-size: 18pt"></i>Inicio</a>
                         </li>
                         <li>
-                            <a href="Controlador?accion=listar">Listar</a>
+                            <a href="Controlador?accion=listar"><i class="fas fa-clipboard-list" style="padding-right: 5px; color: white; font-size: 22pt;"></i>Listar</a>
                         </li>
                         <li>
-                            <a href="Controlador?accion=add">Agregar</a>
+                            <a href="Controlador?accion=add"><i class="fas fa-plus" style="padding-right: 5px; color: white; font-size: 22pt;"></i>Agregar</a>
                         </li>
                     </div>
                 </ul>
@@ -53,10 +53,10 @@
                         <table id="team" class="display table table-striped table-bordered">
                         <thead>
                             <tr>
-                                <th>Codigo Persona</th>
-                                <th>DPI Persona</th>
-                                <th>Nombre Persona</th>
-                                <th>Acciones</th>
+                                <th class="text-center">Codigo Persona</th>
+                                <th class="text-center">DPI Persona</th>
+                                <th class="text-center">Nombre Persona</th>
+                                <th class="text-center">Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -69,10 +69,10 @@
                     per = iterador.next();
                 %>
                             <tr>
-                                <td><%= per.getCodigoPersona()%></td>
-                                <td><%= per.getDPI()%></td>
-                                <td><%= per.getNombrePersona()%></td>
-                                <td>
+                                <td class="text-center"><%= per.getCodigoPersona()%></td>
+                                <td class="text-center"><%= per.getDPI()%></td>
+                                <td class="text-center"><%= per.getNombrePersona()%></td>
+                                <td class="text-center">
                                     <a href="Controlador?accion=editar&codigoPersona=<%= per.getCodigoPersona()%>" class="btn btn-primary">Editar</a>
                                     <a onclick='deleteM()' href="Controlador?accion=eliminar&codigoPersona=<%= per.getCodigoPersona()%>" class="btn btn-danger">Eliminar</a>
                                 </td>           
