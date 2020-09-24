@@ -12,17 +12,17 @@
 # Paso 3
 
 - Abrir el proyecto en NetBeans.
-![Paso 3]() 
+![](https://github.com/Carlos-Selman/CRUDPROYECTOFINAL-2018325/blob/assets/assets/netbeans.png) 
 
 # Paso 4
 
-- Corrar el proyecto, al abrir se presentara la pantalla del home.
-![Paso 4]()
+- Correr el proyecto, al abrir se presentara la pantalla del home.
+![](https://github.com/Carlos-Selman/CRUDPROYECTOFINAL-2018325/blob/assets/assets/home.png)
 
 # Paso 5
 
 - Al dar clic en el icono en la parte superior izquierda se abrira el menu en donde puede navegar en los diferentes apartados y realizar la operacion deseada.
-![Paso 5]()
+![](https://github.com/Carlos-Selman/CRUDPROYECTOFINAL-2018325/blob/assets/assets/home-nav.png)
 
 
 
@@ -36,17 +36,29 @@
 
 - Filtrar por nombre
   * Puede filtrar por el nombre de registro o por numero de DPI como se ve en la imagen.
-  ![Filtrar]()
+  ![](https://github.com/Carlos-Selman/CRUDPROYECTOFINAL-2018325/blob/assets/assets/filtrar.png)
+  
+  
   * Elija el numero de registros que desea mostrar.
-  ![Registros]()
+  ![](https://github.com/Carlos-Selman/CRUDPROYECTOFINAL-2018325/blob/assets/assets/registros.png)
+  
+  
   * Agregar Registros
-  ![Agregar]()
+  ![](https://github.com/Carlos-Selman/CRUDPROYECTOFINAL-2018325/blob/assets/assets/add.png)
+  
+  
   * Listar Registros
-  ![Listar]()
+  ![](https://github.com/Carlos-Selman/CRUDPROYECTOFINAL-2018325/blob/assets/assets/listar.png)
+  
+  
   * Modificar Registros
-  ![Modificar]()
+  ![](https://github.com/Carlos-Selman/CRUDPROYECTOFINAL-2018325/blob/assets/assets/update1.png)
+  ![](https://github.com/Carlos-Selman/CRUDPROYECTOFINAL-2018325/blob/assets/assets/update.png)
+  
+  
+  
   * Eliminar Registros
-  ![Eliminar()
+  ![](https://github.com/Carlos-Selman/CRUDPROYECTOFINAL-2018325/blob/assets/assets/erase.png)
   
   
 
