@@ -1,32 +1,23 @@
 package model;
-
 public class Persona {
-
-    private int codigoPersona;
+    private int CodigoPersona;
     private String DPI;
-    private String nombrePersona;
-    private String telefono;
-    private String estado;
-    private String usuario;
+    private String NombrePersona;
+    
+    public Persona(){}
 
-    public Persona() {
-    }
-
-    public Persona(int codigoPersona, String DPI, String nombrePersona, String telefono, String estado, String usuario) {
-        this.codigoPersona = codigoPersona;
+    public Persona(int CodigoPersona, String DPI, String NombrePersona) {
+        this.CodigoPersona = CodigoPersona;
         this.DPI = DPI;
-        this.nombrePersona = nombrePersona;
-        this.telefono = telefono;
-        this.estado = estado;
-        this.usuario = usuario;
+        this.NombrePersona = NombrePersona;
     }
 
     public int getCodigoPersona() {
-        return codigoPersona;
+        return CodigoPersona;
     }
 
-    public void setCodigoPersona(int codigoPersona) {
-        this.codigoPersona = codigoPersona;
+    public void setCodigoPersona(int CodigoPersona) {
+        this.CodigoPersona = CodigoPersona;
     }
 
     public String getDPI() {
@@ -38,35 +29,12 @@ public class Persona {
     }
 
     public String getNombrePersona() {
-        return nombrePersona;
+        return NombrePersona;
     }
 
-    public void setNombrePersona(String nombrePersona) {
-        this.nombrePersona = nombrePersona;
+    public void setNombrePersona(String NombrePersona) {
+        this.NombrePersona = NombrePersona;
     }
-
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
-
-    public String getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
-
+    
+    
 }
