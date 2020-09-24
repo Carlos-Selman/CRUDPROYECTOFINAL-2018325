@@ -12,7 +12,7 @@ public class Conexion {
     public Conexion() {
         try {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/ProyectoIN5BM?useTimeZone=true&serverTimezone=UTC&autoReconnect=true&useSSL=false", "root","admin");            
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/ProyectoIN5BM?useTimeZone=true&serverTimezone=UTC&autoReconnect=true&useSSL=false", "root","antony");            
         }catch(Exception e){
             e.printStackTrace();
         }
