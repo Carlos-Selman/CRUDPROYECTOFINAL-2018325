@@ -1,19 +1,39 @@
-drop database if exists ProyectoIN5BM;
-create database ProyectoIN5BM;
-use ProyectoIN5BM;
+#==== drop database if exists DBRegistro;
+create database DBRegistro;
+use DBRegistro;
 
-create table Persona(
-    codigoPersona int not null auto_increment primary key,
+create table persona(
+	codigoPersona int not null auto_increment primary key,
     DPI varchar(15) not null,
     NombrePersona varchar(200) not null
 );
-insert into persona(DPI, NombrePersona) values (2018325,'Carlos Andrés Selman David');
-insert into persona(DPI, NombrePersona) values (2016228,'Martín Alejandro Tecun Charles');
-insert into persona(DPI, NombrePersona) values (2019038,'Antony Josué Toribio Pérez');
-insert into persona(DPI, NombrePersona) values (2019017,'Oscar Joaquín Sián Orón');
-insert into persona(DPI, NombrePersona) values (2016262,'Juan José Rodas Mansilla');
-insert into persona(DPI, NombrePersona) values (2016243,'José Andrés Subuyuj Guzmán');
-insert into persona(DPI, NombrePersona) values (2019041,'Jorge Eduardo Morataya Socop');
-insert into persona(DPI, NombrePersona) values (2019047,'Luis Rodrigo Morales Florián');
-insert into persona(DPI, NombrePersona) values (2016497,'José Alejandro Zuñiga Collado');
-insert into persona(DPI, NombrePersona) values (2019035,'Fredy Jose Daniel Reyes Saban');
+
+#======= Examen final.
+create table Rol (
+	codigo_rol int not null auto_increment primary key,
+    descripcion varchar(32) not null
+);
+
+create table Usuario (
+	codigo_Usuario int primary key auto_increment,
+    users varchar(32) not null,
+    passwords varchar(32) not null,
+    rols int,
+    foreign key(rols) references Rol(codigo_rol)
+);
+
+#==== Registros de Rol
+insert into Rol (codigo_rol, descripcion) value(1, 'Administrador');
+insert into Rol (codigo_rol, descripcion) value(2, 'Usuario');
+
+#==== Registros de Usuario
+insert into Usuario(codigo_Usuario, users, passwords, rols) value (1, 'tecunMartin', '1234', 1);
+insert into Usuario(codigo_Usuario, users, passwords, rols) value (2, 'aleCh', '1234', 2);
+insert into Usuario(codigo_Usuario, users, passwords, rols) value (3, 'manuelVega', '1234', 1);
+insert into Usuario(codigo_Usuario, users, passwords, rols) value (4, 'otherUser', '1234', 2);
+insert into Usuario(codigo_Usuario, users, passwords, rols) value (5, 'perezLopes', '1234', 1);
+
+
+insert into persona(DPI,NombrePersona) value(201622849156,"Martin");
+insert into persona(DPI,NombrePersona) value(202015489120,"Alejandro");
+insert into persona(DPI,NombrePersona) value(405060107890,"Pedro");

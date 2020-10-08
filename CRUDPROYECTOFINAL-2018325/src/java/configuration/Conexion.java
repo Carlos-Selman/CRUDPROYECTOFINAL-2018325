@@ -10,7 +10,7 @@ public class Conexion {
     public Conexion(){
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/ProyectoIN5BM?useSSL=false","root","root");
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/DBRegistro?useTimeZone=true&serverTimezone=UTC&autoReconnect=true&useSSL=false", "root","admin");
             System.out.println("Conexion Establecida ...");
         }catch(Exception e){
             e.printStackTrace();

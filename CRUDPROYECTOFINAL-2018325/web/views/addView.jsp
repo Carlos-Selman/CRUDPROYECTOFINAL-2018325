@@ -28,13 +28,16 @@
                     </li>
                     <div class="links">
                         <li>
-                            <a href="index.html"><i class="fas fa-home" style="padding-right: 5px; color: white; font-size: 18pt"></i>Inicio</a>
+                            <a href="Controlador?accion=home"><i class="fas fa-home" style="padding-right: 5px; color: white; font-size: 18pt"></i>Inicio</a>
                         </li>
                         <li>
                             <a href="Controlador?accion=listar"><i class="fas fa-clipboard-list" style="padding-right: 5px; color: white; font-size: 22pt;"></i>Listar</a>
                         </li>
                         <li>
                             <a href="Controlador?accion=add"><i class="fas fa-plus" style="padding-right: 5px; color: white; font-size: 22pt;"></i>Agregar</a>
+                        </li>
+                        <li>
+                            <a href="Controlador?accion=login"><i class="fas fa-sign-in-alt" style="padding-right: 5px; color: white; font-size: 22pt;"></i>cerrar sesión</a>
                         </li>
                     </div>
                 </ul>
@@ -45,15 +48,15 @@
                     <a href="#menu-toggle" class="float-right" id="menu-toggle"><i class="fas fa-bars" style="whidth: 15px; height: 15px;"></i></a>
                     <!--**** CONTENIDO AQUI *******-->
                     <h1 class="text-center">Agregar Persona</h1>
-                        <form action="Controlador" class="col-xs-5" style="padding-left: 400px; padding-right: 0; width: 70%; padding-top: 50px;">
-                            <strong>DPI:</strong><br>
-                            <input class="form-control" type="text" name="txtDPI" required><br>
-                            <strong>Nombres:</strong><br>
-                            <input class="form-control" type="text" name="txtNombres" required><br><br>
-                            <div class="text-center">
-                                <input class="btn btn-success btn-lg" type="submit" name="accion" value="Agregar" onclick='add()'>
-                            </div>
-                        </form>
+                    <form action="Controlador" class="col-xs-5" style="padding-left: 400px; padding-right: 0; width: 70%; padding-top: 50px;">
+                        <strong>DPI:</strong><br>
+                        <input class="form-control" type="text" name="txtDPI" required><br>
+                        <strong>Nombres:</strong><br>
+                        <input class="form-control" type="text" name="txtNombres" required><br><br>
+                        <div class="text-center">
+                            <input class="btn btn-success btn-lg" type="submit" name="accion" value="Agregar" onclick='add()'>
+                        </div>
+                    </form>
                     <!--**** CONTENIDO AQUI *******-->
                 </div>
             </div>

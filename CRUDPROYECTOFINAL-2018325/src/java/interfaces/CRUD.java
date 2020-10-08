@@ -4,7 +4,6 @@ import java.util.List;
 import model.Persona;
 
 public interface CRUD {
- 
     public List listar();
     public Persona list(int id);
     public boolean add(Persona per);

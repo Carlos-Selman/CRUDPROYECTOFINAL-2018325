@@ -1,6 +1,7 @@
+<%@page import="java.io.PrintWriter"%>
+<%@page import="model.loginModel"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.List"%>
-<%@page import="model.Persona"%>
 <%@page import="model.Persona"%>
 <%@page import="modelDAO.PersonaDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -16,6 +17,7 @@
         <link rel="stylesheet" type="text/css" href="dist/css/dataTables/dataTables.bootstrap4.min.css">
         <link rel="stylesheet" href="dist/css/fontawesome/css/all.min.css">
         <link rel="stylesheet" href="dist/css/main.css">
+        <link rel="stylesheet" href="dist/css/global.css">
         <!--Termina CSS-->
         <title>Listar</title>
     </head>
@@ -31,15 +33,18 @@
                             <center><img src="dist/img/LOGO CPF.png" class="img-responsive img-circle logo-img"></center>
                         </a>
                     </li>
-                    <div class="links">
+                    <div class="links" id="lista">
                         <li>
-                            <a href="index.html"><i class="fas fa-home" style="padding-right: 5px; color: white; font-size: 18pt"></i>Inicio</a>
+                            <a href="Controlador?accion=home"><i class="fas fa-home" style="padding-right: 5px; color: white; font-size: 18pt"></i>Inicio</a>
                         </li>
                         <li>
                             <a href="Controlador?accion=listar"><i class="fas fa-clipboard-list" style="padding-right: 5px; color: white; font-size: 22pt;"></i>Listar</a>
                         </li>
-                        <li>
+                        <li class="<%out.println(request.getAttribute("listars"));%>">
                             <a href="Controlador?accion=add"><i class="fas fa-plus" style="padding-right: 5px; color: white; font-size: 22pt;"></i>Agregar</a>
+                        </li>
+                        <li>
+                            <a href="Controlador?accion=login"><i class="fas fa-sign-in-alt" style="padding-right: 5px; color: white; font-size: 22pt;"></i>cerrar sesión</a>
                         </li>
                     </div>
                 </ul>
@@ -60,21 +65,21 @@
                             </tr>
                         </thead>
                         <tbody>
-                <%
-                PersonaDAO dao = new PersonaDAO();
-                List<Persona> listaPersona = dao.listar();
-                Iterator<Persona> iterador = listaPersona.iterator();
-                Persona per = null;
-                while(iterador.hasNext()){
-                    per = iterador.next();
-                %>
+                    <%
+                    PersonaDAO dao = new PersonaDAO();
+                    List<Persona> listaPersona = dao.listar();
+                    Iterator<Persona> iterador = listaPersona.iterator();
+                    Persona per = null;
+                    while(iterador.hasNext()){
+                        per = iterador.next();
+                    %>
                             <tr>
                                 <td class="text-center"><%= per.getCodigoPersona()%></td>
                                 <td class="text-center"><%= per.getDPI()%></td>
                                 <td class="text-center"><%= per.getNombrePersona()%></td>
                                 <td class="text-center">
-                                    <a href="Controlador?accion=editar&codigoPersona=<%= per.getCodigoPersona()%>" class="btn btn-primary">Editar</a>
-                                    <a onclick='deleteM()' href="Controlador?accion=eliminar&codigoPersona=<%= per.getCodigoPersona()%>" class="btn btn-danger">Eliminar</a>
+                                    <a href="Controlador?accion=editar&codigoPersona=<%= per.getCodigoPersona()%>" class="btn btn-primary <%out.println(request.getAttribute("listars"));%>">Editar</a>
+                                    <a onclick='deleteM()' href="Controlador?accion=eliminar&codigoPersona=<%= per.getCodigoPersona()%>" class="btn btn-danger <%out.println(request.getAttribute("listars"));%>">Eliminar</a>
                                 </td>           
                             </tr>
                     <%
